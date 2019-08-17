@@ -1,53 +1,53 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const paths = {
-    public: path.resolve(__dirname, 'www/'),
-    src: path.resolve(__dirname, 'assetSource/')
+    src: path.resolve(__dirname, 'assetsSource'),
+    public: path.resolve(__dirname, 'www'),
 };
-// const isDev = NODE_ENV == 'development';
-// console.log(process.env.NODE_ENV);
+console.log(paths.src);
 module.exports = {
     context: paths.src,
     entry: {
-        main: 'index.js'
+        main: './index.js'
     },
     output: {
-        filename: 'build/[name].js',
-        path: paths.public
+        path: paths.public,
+        filename: 'build/[name].min.js'
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                loader: 'babel-loader',
-                exclude: '/node_modules'
+                test: /\.(jsx|js)$/,
+                exclude: '/node_modules',
+                use: ["babel-loader"],
             },
             {
                 test: /\.less$/,
-                exclude: '/node_modules',
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'less-loader'],
-                    fallback: 'style-loader'
-                })
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'less-loader']
+                }),
             }
         ]
     },
-    plugins: [new ExtractTextPlugin({
-        filename: 'build/[name].min.css'
-    })],
+    plugins: [
+        new ExtractTextPlugin({
+            filename: 'build/[name].min.css',
+        })
+    ],
     devServer: {
         contentBase: paths.public,
         // publicPath: paths.public,
         historyApiFallback: true,
         compress: true,
-        port: 9002,
+        port: 9001,
         hot: true
     },
-    devtool: 'source-map',
-    watch: false,
+    devtool: "source-map",
     resolve: {
+        symlinks: false,
         extensions: ['.jsx', '.js'],
-        modules: ['node_modules', paths.src]
+        modules: [paths.src, 'node_modules']
     },
     watchOptions: {
         aggregateTimeout: 300
