@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Provider} from "react-redux";
 import initStore from "./store";
-import {AutofillContainer} from "./modules/autofill/containers/AutofillContainer";
+import {AutofillContainer} from "./modules/module/containers/AutofillContainer";
 
 const store = initStore();
 
