@@ -1,2 +1,2 @@
-const autofillModuleName = 'AUTOFILL_MODULE';
-export {autofillModuleName}
+const Module1Name = 'MODULE1';
+export {Module1Name}

@@ -1,14 +1,14 @@
-import {compose, createStore, applyMiddleware} from 'redux';
-import reducer from './reducer';
-import thunk from 'redux-thunk';
+import {applyMiddleware, createStore} from 'redux';
+import {mainReducer} from "./reducer";
+import thunk from "redux-thunk";
+import {myMiddleware} from "./my-middleware";
+import {actionSetData} from "../modules/module/actions";
+const extraArgument = {pidors: 'da'};
 
-export default function initStore() {
-    const reduxCompose = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-    const store = createStore(reducer, reduxCompose(applyMiddleware(thunk)));
-    if (module.hot) {
-        module.hot.accept('./reducer.js', () => {
-            store.replaceReducer(reducer);
-        })
-    }
-    return store;
-}
+
+const store = createStore(mainReducer, applyMiddleware(myMiddleware, thunk.withExtraArgument(extraArgument)));
+console.log(store);
+store.dispatch(actionSetData('thunk is super'));
+console.log(store.getState());
+
+export {store}

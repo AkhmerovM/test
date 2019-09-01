@@ -1,15 +1,19 @@
-import React from 'react';
+import {Module1Name} from "../constansts";
 
-const initialState = {};
-
-const autofillReducer = (state = initialState, action) => {
+const initialState = {
+  data: [],
+};
+const Module1Reducer = (state = initialState, action) => {
     switch (action.type) {
-        case ('SET_DATA_SET') :
+        case ('MODULE1_SET_DATA') :
             return {
                 ...state,
                 data: action.payload
             };
-        default: return {...state};
+        default:
+            return {
+                ...state
+            }
     }
 };
-export {autofillReducer}
+export {Module1Reducer}

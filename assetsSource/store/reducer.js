@@ -1,7 +1,6 @@
+import {Module1Reducer} from "../modules/module/reducers";
 import {combineReducers} from "redux";
-import {autofillReducer} from "../modules/autofill/reducers";
-import {autofillModuleName} from "../modules/autofill/constansts";
+import {Module1Name} from "../modules/module/constansts";
 
-export default combineReducers({
-    [autofillModuleName]: autofillReducer,
-})
+const mainReducer = combineReducers({[Module1Name]: Module1Reducer});
+export {mainReducer}
