@@ -20,13 +20,12 @@
   },
   "homepage": "https://github.com/AkhmerovM/test#readme",
   "devDependencies": {
-    "react": "^16.9.0",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "autofill": "git+https://github.com/AkhmerovM/AutofillComponent.git",
     "babel": "^6.23.0",
     "babel-loader": "^8.0.6",
     "babel-preset-react": "^6.24.1",
@@ -35,7 +34,9 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
+    "mobx-react": "^6.1.3",
     "postcss-loader": "^3.0.0",
+    "react": "^16.9.0",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
@@ -44,5 +45,8 @@
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "mobx": "^5.13.0"
   }
 }

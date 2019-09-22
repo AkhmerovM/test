@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
-import {Provider} from "react-redux";
-import initStore from "./store";
-import {AutofillContainer} from "./modules/autofill/containers/AutofillContainer";
+import {observer} from 'mobx-react';
 
-const store = initStore();
-
+@observer
 class App extends Component {
+    handleClick = () => {
+        console.log(this.props);
+    };
     render () {
         return (
-            <Provider store={store} >
-                <AutofillContainer />
-            </Provider >
+            <button onClick={this.handleClick}>Click</button>
         )
     }
 }
