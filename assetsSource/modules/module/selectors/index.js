@@ -1,7 +1,7 @@
-import {autofillModuleName} from "modules/autofill/constansts";
+import {moduleName} from "modules/module/constansts";
 
 function selectAutoFillModuleName (state) {
-    return state[autofillModuleName];
+    return state[moduleName];
 }
 function selectAutoFillModuleData (state) {
     return selectAutoFillModuleName(state).data;
