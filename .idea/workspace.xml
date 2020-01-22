@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c807e7b9-4459-4eb9-8a02-c558aecea1f3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/assetsSource/modules/module/containers/SecondContainer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assetsSource/modules/module/hooks/use-get-count.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assetsSource/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/assetsSource/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assetsSource/modules/module/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assetsSource/modules/module/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assetsSource/modules/module/containers/FirstContainer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assetsSource/modules/module/containers/FirstContainer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assetsSource/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/assetsSource/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/build/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/build/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/build/main.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/build/main.min.js.map" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,18 +29,6 @@
         <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>det</find>
-      <find>favicon</find>
-      <find>fav</find>
-      <find>favic</find>
-      <find>more</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,13 +57,14 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assetsSource/modules/module/containers" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assetSource/modules/sort" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/www" />
       <recent name="$PROJECT_DIR$/assetSource" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/assetSource/modules/sort" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -99,6 +92,10 @@
       <workItem from="1552622101893" duration="800000" />
       <workItem from="1573894080049" duration="2910000" />
       <workItem from="1574910863460" duration="1730000" />
+      <workItem from="1576216242003" duration="1317000" />
+      <workItem from="1577419317369" duration="1945000" />
+      <workItem from="1579420200312" duration="6800000" />
+      <workItem from="1579499428557" duration="254000" />
     </task>
     <servers />
   </component>

@@ -15,4 +15,9 @@ const getDataSet = (url) => {
         }
     }
 };
-export {getDataSet}
+const setDataSet = (data) => {
+    return async (dispatch) => {
+        dispatch(actionSetDataSet(data))
+    }
+};
+export {getDataSet, setDataSet}
