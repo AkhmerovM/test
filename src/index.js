@@ -1,27 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {SearchPanel} from "./components/search-panel";
-import {TodoList} from "./components/todo-list";
-import {AppHeader} from "./components/app-header";
-
-const App = () => {
-    const data = [
-        {label:'fanana', important:true},
-        {label:'fanana', important:true},
-        {label:'fanana', important:true},
-        {label:'fanana', important:true}
-    ];
-    return (<div>
-        <AppHeader />
-        <SearchPanel />
-        <TodoList todos={data} />
-    </div>)
-};
-
-ReactDOM.render(<App/>, document.querySelector('#root'));
-
-
-function f () {
-    console.log(this);
-}
-f();
+// 'https://randomuser.me/api/'
+(async function() {
+     const pr1 = new Promise((resolve, reject) => {
+         setTimeout(resolve, 1000, 'one');
+     });
+     const pr2 = new Promise((resolve, reject) => {
+         setTimeout(reject, 500, 'two');
+     });
+     Promise.race([pr1, pr2]).then((response) => {
+         console.log(response);
+     });
+})();
