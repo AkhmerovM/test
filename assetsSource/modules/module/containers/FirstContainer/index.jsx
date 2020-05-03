@@ -1,17 +1,28 @@
-import React, {Component, useEffect, useState, PureComponent} from 'react';
-import {connect, useDispatch} from 'react-redux';
-import {getDataSet, setDataSet} from "modules/module/actions";
-import {SecondContainer} from "modules/module/containers/SecondContainer";
+import React, {useState} from 'react';
+import {useOnclick} from "modules/module/hooks/use-get-count";
 
-class FirstContainer extends PureComponent{
-    render () {
-        console.log('===================== first render');
-        return (
-            <div className="first-container">
-                {() => <h1>AHAHSHDS</h1>}
-            </div>
-        )
+function FirstContainer(props) {
+    const [count, setCount] = useState(0);
+    const [number, setNumber] = useState(0);
+    const useOnclickHandler = useOnclick(count);
+    function onclickHandler () {
+        useOnclickHandler(setCount);
     }
+    function onClickNumber () {
+        setNumber((prevNumber) => prevNumber + 1)
+    }
+    return (
+        <div>
+            <div>{count}</div>
+            <button onClick={onclickHandler}>
+                Count
+            </button>
+            <div>{number}</div>
+            <button onClick={onClickNumber}>
+                Number
+            </button>
+        </div>
+    )
 }
 
 export {FirstContainer}
