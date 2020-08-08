@@ -5,7 +5,9 @@
   "dependencies": {},
   "scripts": {
     "babel": "babel src/index.js --out-dir lib",
-    "server": "webpack-dev-server"
+    "server": "webpack-dev-server",
+    "dev": "webpack --mode=development",
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,9 +25,11 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.9.6",
+    "@babel/preset-flow": "^7.10.4",
+    "flow-bin": "^0.131.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
