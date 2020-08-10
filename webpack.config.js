@@ -11,10 +11,24 @@ module.exports = {
         filename: '[name].min.js',
         path: paths.lib,
     },
+    module: {
+      rules: [
+          {
+              test: /\.js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                  loader: 'babel-loader',
+                  options: {
+                      presets: ["@babel/preset-env"]
+                  }
+              }
+          }
+      ]
+    },
     devServer: {
         contentBase: paths.lib,
         compress: true,
-        port: 9000,
+        port: 9001,
         hot: true
     }
 };
